@@ -1,0 +1,67 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 25px;
+  max-width: 450px;
+  min-width: 400px;
+  background-color: black;
+}
+
+.about__header {
+  margin-bottom: 30px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.about__text {
+  margin-bottom: 20px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.about__location,
+.about__text {
+  max-width: 255px;
+}
+
+.about__myPhoto {
+  width: 255px;
+  height: 269px;
+  display: flex;
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+.contacts_icon {
+  margin-right: 10px;
+}
+
+.contacts_li {
+  display: flex;
+  align-items: center;
+}
+
+.mailIcon {
+  min-width: 42px;
+}
+
+.gitIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #ffffff;
+}
+a:hover {
+  color: #afafaf;
+}

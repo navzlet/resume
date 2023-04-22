@@ -1,0 +1,66 @@
+.skills {
+  padding-top: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  color: #000000;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 58px;
+  color: #383838;
+  margin-bottom: 120px;
+}
+
+.skills__block {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  margin-left: 15px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+hr {
+  border: none;
+  background-color: black;
+  color: black;
+  height: 2px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #383838;
+  margin-bottom: 40px;
+}
+
+.skills__education,
+header {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.skills__experience,
+header {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
