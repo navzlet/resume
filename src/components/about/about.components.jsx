@@ -18,6 +18,7 @@ export const About = () => {
         <li className="about__mail contacts_li about__text">
           <MailIcon className="contacts_icon mailIcon" />
           <a
+            id="mail"
             rel="noreferrer"
             target="_blank"
             href="mailto:sasha_zakirov_2014@mail.ru"

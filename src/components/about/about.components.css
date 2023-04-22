@@ -24,7 +24,7 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  color: #ffffff;
+  color: #dbdbdb;
 }
 
 .about__location,
@@ -61,7 +61,14 @@
 
 a {
   color: #ffffff;
+  transition-property: color;
+  transition-duration: 0.25s;
 }
 a:hover {
   color: #afafaf;
+}
+
+.about_skill,
+about__text {
+  font-size: 20px;
 }
