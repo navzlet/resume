@@ -2,10 +2,15 @@
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+  padding-right: 20px;
   padding-top: 25px;
   max-width: 450px;
   min-width: 400px;
   background-color: black;
+}
+
+.about__nameMobile {
+  display: none;
 }
 
 .about__header {
@@ -69,6 +74,58 @@ a:hover {
 }
 
 .about_skill,
-about__text {
+.about__text {
   font-size: 20px;
+}
+
+@media (max-width: 810px) {
+  .about__nameMobile * {
+    font-size: 40px;
+    display: inline;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+  .about__nameMobile {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about {
+    width: 100%;
+    max-width: 810px;
+    align-items: center;
+  }
+  .about__location,
+  .about__text {
+    max-width: 700px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 270px;
+  }
+  .about__text {
+    font-size: 16px;
+  }
+  .about_aboutText {
+    min-width: none;
+  }
+  .about__header {
+    font-size: 28px;
+  }
+  .about__myPhoto {
+    width: 200px;
+    height: 200px;
+  }
 }

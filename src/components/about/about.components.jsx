@@ -9,6 +9,10 @@ export const About = () => {
   return (
     <div className="about">
       <img className="about__myPhoto" alt="my face" src={photo} />
+      <div className="about__nameMobile">
+        <h1 className="">Закиров Александр</h1>
+        <h2 className="">Frontend-developer</h2>
+      </div>
       <h3 className="about__location about__header">Локация</h3>
       <p className="about__location about__text">
         Yekaterinburg, Russia, GMT+5
