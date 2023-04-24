@@ -1,9 +1,9 @@
 import React from "react";
 import "./projectButton.components.css";
 
-export const ProjectButton = ({ name }) => {
+export const ProjectButton = ({ setIsModalOpen, name }) => {
   return (
-    <div className="button">
+    <div onClick={() => setIsModalOpen(true)} className="button">
       <div className="button__text">{name}</div>
     </div>
   );
