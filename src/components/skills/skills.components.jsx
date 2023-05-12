@@ -8,14 +8,44 @@ import { ProjectModal } from "./projectModal.components";
 
 export const Skills = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const mocProjectExample = {
-    name: "Хакатон от компании «Сервис Газификация» ",
-    stack: "React, Mui",
-    description: "dsadkfas",
-    codeUrl: "https://yandex.com",
-    previewUrl: false,
-  };
-  const [projectExample, setProjectExample] = useState(mocProjectExample);
+  const [modalContent, setModalContent] = useState(null);
+  const mocProjectExample = [
+    {
+      name: "Хакатон от компании «Сервис Газификация» ",
+      stack: "React, Mui",
+      description:
+        "За небольшой срок (3 дня) был написан веб-интерфейс, позволяющий оператору редактировать значения таблицы данных. Моя часть работы находится в папке 'hack1t3_front'", 
+      codeUrl: "https://github.com/navzlet/Hackaton",
+      previewUrl: false,
+      type: "college",
+    },
+    {
+      name: "Мобильное приложение для коммунальных служб ",
+      stack: "React-native, expo",
+      description:
+        "Позволяет создавать новые заявки и отслеживать список актуальных заявок.",
+      codeUrl: "https://github.com/navzlet/JKH",
+      previewUrl: "https://navzlet.github.io/todo-list/",
+      type: "college",
+    },
+    {
+      name: "To-do list v. 1",
+      stack: "React, MobX, SCSS, typescript",
+      description: "Тестовое задание - туду лист. Позволяет создавать, сортировать, удалять записи.",
+      codeUrl: "https://github.com/navzlet/todo-list",
+      previewUrl: false,
+      type: "pet",
+    },
+    {
+      name: "To-do list v. 2",
+      stack: "Typescript, webpack",
+      description:
+        "Вторая версия того туду-листа: функционал тот же, но приложение написанно без реакта. Позволяет создавать, сортировать, удалять записи.",
+      codeUrl: "https://github.com/navzlet/todo",
+      previewUrl: "https://navzlet.github.io/todo/",
+      type: "pet",
+    },
+  ];
 
   return (
     <div className="skills">
@@ -53,21 +83,30 @@ export const Skills = () => {
         <h4 className="skills__experience header">
           2022-2023, College projects:
         </h4>
-
-        <ProjectButton
-          setIsModalOpen={setIsModalOpen}
-          name="Хакатон от компании «Сервис Газификация» "
-        />
-        <ProjectButton
-          setIsModalOpen={setIsModalOpen}
-          name="Мобильное приложение для коммунальных служб"
-        />
+        {mocProjectExample.map((project) =>
+          project.type === "college" ? (
+            <ProjectButton
+              setIsModalOpen={setIsModalOpen}
+              project={project}
+              setModalContent={setModalContent}
+              name={project.name}
+            />
+          ) : null
+        )}
         <h4 className="skills__experience header">Pet Projects:</h4>
-        <ProjectButton setIsModalOpen={setIsModalOpen} name="To-do list v. 1" />
-        <ProjectButton setIsModalOpen={setIsModalOpen} name="To-do list v. 2" />
+        {mocProjectExample.map((project) =>
+          project.type === "pet" ? (
+            <ProjectButton
+              project={project}
+              setModalContent={setModalContent}
+              setIsModalOpen={setIsModalOpen}
+              name={project.name}
+            />
+          ) : null
+        )}
         {isModalOpen ? (
           <ProjectModal
-            projectData={projectExample}
+            projectData={modalContent}
             setIsModalOpen={setIsModalOpen}
           />
         ) : null}

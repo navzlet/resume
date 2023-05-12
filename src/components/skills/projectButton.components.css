@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+.button:hover{
+  background-color: #e3e5ff;
+}
+
 .button__text {
   font-weight: 400;
   font-size: 32px;

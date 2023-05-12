@@ -11,13 +11,19 @@ export const ProjectModal = ({ setIsModalOpen, projectData }) => {
       <p className="modal__content">{projectData.stack}</p>
       <div className="modal__header">Описание:</div>
       <p className="modal__content">{projectData.description}</p>
-      <a target="_blank" href={projectData.codeUrl}>
+      <a target="_blank" rel="noreferrer" href={projectData.codeUrl}>
         <div className="modal__codeLink link">
           Ссылка на код:
           <GithubModalIcon />
         </div>
       </a>
-      <a target="_blank" href="https://google.com">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href={
+          projectData.previewUrl ? projectData.previewUrl : projectData.codeUrl
+        }
+      >
         <div className="modal__previewLink link">
           Предпросмотр:
           {projectData.previewUrl ? <InternetModalIcon /> : " Недоступен :("}
