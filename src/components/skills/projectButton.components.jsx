@@ -12,6 +12,8 @@ export const ProjectButton = ({
       onClick={() => {
         setIsModalOpen(true);
         setModalContent(project);
+        let projects = document.querySelector('.skills__projects')
+        projects.classList.add('hide')
       }}
       className="button"
     >

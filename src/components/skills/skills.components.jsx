@@ -25,7 +25,7 @@ export const Skills = () => {
       description:
         "Позволяет создавать новые заявки и отслеживать список актуальных заявок.",
       codeUrl: "https://github.com/navzlet/JKH",
-      previewUrl: "https://navzlet.github.io/todo-list/",
+      previewUrl: false,
       type: "college",
     },
     {
@@ -33,7 +33,7 @@ export const Skills = () => {
       stack: "React, MobX, SCSS, typescript",
       description: "Тестовое задание - туду лист. Позволяет создавать, сортировать, удалять записи.",
       codeUrl: "https://github.com/navzlet/todo-list",
-      previewUrl: false,
+      previewUrl: "https://navzlet.github.io/todo-list/",
       type: "pet",
     },
     {
@@ -80,7 +80,22 @@ export const Skills = () => {
       </div>
       <hr />
       <div className="skills__experienceContent">
-        <h4 className="skills__experience header">
+
+      <div className="skills__projects hide">
+
+
+</div>
+
+        {isModalOpen ? (
+          <ProjectModal
+            projectData={modalContent}
+            setIsModalOpen={setIsModalOpen}
+          />
+          
+        ) : 
+        (
+          <div className="projects">
+                    <h4 className="skills__experience header">
           2022-2023, College projects:
         </h4>
         {mocProjectExample.map((project) =>
@@ -104,12 +119,13 @@ export const Skills = () => {
             />
           ) : null
         )}
-        {isModalOpen ? (
-          <ProjectModal
-            projectData={modalContent}
-            setIsModalOpen={setIsModalOpen}
-          />
-        ) : null}
+
+          </div>
+        )
+        }
+
+
+
       </div>
     </div>
   );

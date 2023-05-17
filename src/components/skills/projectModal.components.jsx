@@ -29,7 +29,7 @@ export const ProjectModal = ({ setIsModalOpen, projectData }) => {
           {projectData.previewUrl ? <InternetModalIcon /> : " Недоступен :("}
         </div>
       </a>
-      <button onClick={() => setIsModalOpen(false)}>close</button>
+      <button className="modal__closeBtn" onClick={() => setIsModalOpen(false)}>close</button>
     </div>
   );
 };

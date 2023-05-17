@@ -67,6 +67,11 @@ header {
 
 .skills__experienceContent {
   position: relative;
+  height: auto;
+}
+
+.hide {
+  display: none;
 }
 
 @media (max-width: 810px) {
