@@ -14,7 +14,7 @@ export const Skills = () => {
       name: "Хакатон от компании «Сервис Газификация» ",
       stack: "React, Mui",
       description:
-        "За небольшой срок (3 дня) был написан веб-интерфейс, позволяющий оператору редактировать значения таблицы данных. Моя часть работы находится в папке 'hack1t3_front'", 
+        "За небольшой срок (3 дня) был написан веб-интерфейс, позволяющий оператору редактировать значения таблицы данных. Моя часть работы находится в папке 'hack1t3_front'",
       codeUrl: "https://github.com/navzlet/Hackaton",
       previewUrl: false,
       type: "college",
@@ -31,7 +31,8 @@ export const Skills = () => {
     {
       name: "To-do list v. 1",
       stack: "React, MobX, SCSS, typescript",
-      description: "Тестовое задание - туду лист. Позволяет создавать, сортировать, удалять записи.",
+      description:
+        "Тестовое задание - туду лист. Позволяет создавать, сортировать, удалять записи.",
       codeUrl: "https://github.com/navzlet/todo-list",
       previewUrl: "https://navzlet.github.io/todo-list/",
       type: "pet",
@@ -43,6 +44,14 @@ export const Skills = () => {
         "Вторая версия того туду-листа: функционал тот же, но приложение написанно без реакта. Позволяет создавать, сортировать, удалять записи.",
       codeUrl: "https://github.com/navzlet/todo",
       previewUrl: "https://navzlet.github.io/todo/",
+      type: "pet",
+    },
+    {
+      name: "Task List",
+      stack: "React, Typescript, MobX",
+      description: "Приложение для создания, удаления задач с подзадачами.",
+      codeUrl: "https://github.com/navzlet/task-list",
+      previewUrl: "https://navzlet.github.io/task-list/",
       type: "pet",
     },
   ];
@@ -80,52 +89,41 @@ export const Skills = () => {
       </div>
       <hr />
       <div className="skills__experienceContent">
-
-      <div className="skills__projects hide">
-
-
-</div>
+        <div className="skills__projects hide"></div>
 
         {isModalOpen ? (
           <ProjectModal
             projectData={modalContent}
             setIsModalOpen={setIsModalOpen}
           />
-          
-        ) : 
-        (
+        ) : (
           <div className="projects">
-                    <h4 className="skills__experience header">
-          2022-2023, College projects:
-        </h4>
-        {mocProjectExample.map((project) =>
-          project.type === "college" ? (
-            <ProjectButton
-              setIsModalOpen={setIsModalOpen}
-              project={project}
-              setModalContent={setModalContent}
-              name={project.name}
-            />
-          ) : null
-        )}
-        <h4 className="skills__experience header">Pet Projects:</h4>
-        {mocProjectExample.map((project) =>
-          project.type === "pet" ? (
-            <ProjectButton
-              project={project}
-              setModalContent={setModalContent}
-              setIsModalOpen={setIsModalOpen}
-              name={project.name}
-            />
-          ) : null
-        )}
-
+            <h4 className="skills__experience header">
+              2022-2023, College projects:
+            </h4>
+            {mocProjectExample.map((project) =>
+              project.type === "college" ? (
+                <ProjectButton
+                  setIsModalOpen={setIsModalOpen}
+                  project={project}
+                  setModalContent={setModalContent}
+                  name={project.name}
+                />
+              ) : null
+            )}
+            <h4 className="skills__experience header">Pet Projects:</h4>
+            {mocProjectExample.map((project) =>
+              project.type === "pet" ? (
+                <ProjectButton
+                  project={project}
+                  setModalContent={setModalContent}
+                  setIsModalOpen={setIsModalOpen}
+                  name={project.name}
+                />
+              ) : null
+            )}
           </div>
-        )
-        }
-
-
-
+        )}
       </div>
     </div>
   );
